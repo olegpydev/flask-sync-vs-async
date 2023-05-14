@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Flask - Sync vs Async
+{% endblock %}
+
+{% block content %}
+
+<p>
+    Sends the specified number of requests to the
+    <a href="https://isevenapi.xyz/" title="Tell if a number is even" target="_blank">isevenapi.xyz</a>
+</p>
+<div class="col text-center">
+    <a href="{{ url_for('sync_view') }}">
+        <button type="button" class="btn btn-primary">Sync</button>
+    </a>
+</div>
+<div class="col text-center">
+    <a href="{{ url_for('async_view') }}">
+        <button type="button" class="btn btn-primary">Async</button>
+    </a>
+</div>
+
+{% endblock %}
